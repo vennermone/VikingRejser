@@ -12,5 +12,7 @@ namespace VikingRejser
         public string Adresse { get; set; }
 
         public int Telefon { get; set; }
+
+        public int Id { get; set; }
     }
 }

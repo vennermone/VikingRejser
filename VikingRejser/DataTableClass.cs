@@ -16,6 +16,7 @@ namespace VikingRejser
             foreach (DataRow row in table.Rows)
             {
                 Kunde kunde = GetKunde(row);
+                liste.Add(kunde);
             }
 
             return liste;
@@ -27,7 +28,7 @@ namespace VikingRejser
             kunde.Navn = (string) row["Navn"];
             kunde.Adresse = (string)row["Adresse"];
             kunde.Telefon = (int)row["Telefonnummer"];
-
+            kunde.Id = (int)row["Id"];
             return kunde;
         }
     }

@@ -14,6 +14,14 @@ namespace VikingRejser
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        private void RaisePropertyChanged(string propName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+            }
+        }
+
         public Kunde OpretKunde(string navn, string adresse, int telefon)
         {
             if (navn == "")
@@ -28,6 +36,8 @@ namespace VikingRejser
             kunde.Telefon = telefon;
 
             KundeRejseData.OpretKunde(kunde);
+            RaisePropertyChanged(nameof(Kundeoversigt));
+
 
             return kunde;
         }
@@ -38,5 +48,17 @@ namespace VikingRejser
                 return KundeRejseData.Kundeoversigt;
             }
         }
+        public void Gem(Kunde kunde)
+        {
+            KundeRejseData.GemKunde(kunde);
+            RaisePropertyChanged(nameof(Kundeoversigt));
+
+        }
+        public void Remove(Kunde kunde)
+        {
+            KundeRejseData.SletKunde(kunde);
+            RaisePropertyChanged(nameof (Kundeoversigt));
+        }
+
     }
 }

@@ -30,9 +30,20 @@ namespace VikingRejser
         private void bnt_OptretKunde_Click(object sender, RoutedEventArgs e)
         {
             // Find den information brugeren har skrevet ind i text-box-felterne
-
+            try
+            { 
             // Kald funktionslaget for at oprette ny kunde
             RejseFunc.OpretKunde(Tbox_Navn.Text, Tbox_Adresse.Text, int.Parse(Tbox_Telefon.Text));
+            }
+            catch (Exception ex)
+            { 
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Slet_Click(object sender, RoutedEventArgs e)
+        {
+            RejseFunc.Remove(dg_Kunder.SelectedItem as Kunde);
         }
     }
 }
