@@ -21,7 +21,7 @@
                     <TextBox Name="Tbox_Navn" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="Tbox_Adresse" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="Tbox_Telefon" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <DataGrid Grid.Column="2" d:ItemsSource="{Binding KundeRejseFunc.Kundeoversigt}" Margin="178,1,0,49"/>
+                    <DataGrid Grid.Column="2" ItemsSource="{Binding RejseFunc.Kundeoversigt}" Margin="178,1,0,49" HorizontalAlignment="Left" Width="381"/>
                     <Button Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="85,309,0,0" VerticalAlignment="Top"/>
                     <Button Name="bnt_Optret" Grid.Column="2" Content="Opret" HorizontalAlignment="Left" Margin="134,309,0,0" VerticalAlignment="Top" Click="bnt_OptretKunde_Click"/>
                 </Grid>

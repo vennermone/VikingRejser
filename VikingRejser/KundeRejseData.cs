@@ -9,12 +9,19 @@ using System.Threading.Tasks;
 {
     internal class KundeRejseData
     {
+        SqlAccess sqlAccess = new SqlAccess();
+        DataTableClass converter = new DataTableClass();
         public ObservableCollection<Kunde> Kundeoversigt
         {
             get
             {
-                return converter.GetKundeoversigt(sqlAccess.ExecuteSql("select * from Kunde"));
+                return converter.GetKundeoversigt(sqlAccess.ExecuteSql("select * from Kunder"));
             }
+        }
+
+        public void OpretKunde(Kunde kunde)
+        {
+
         }
     }
 }

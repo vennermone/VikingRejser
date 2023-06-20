@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VikingRejser
 {
-    internal class Kunde
+    public class Kunde
     {
         public string Navn { get; set; }
         public string Adresse { get; set; }

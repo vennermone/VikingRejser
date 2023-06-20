@@ -24,6 +24,7 @@ namespace VikingRejser
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private void bnt_OptretKunde_Click(object sender, RoutedEventArgs e)
