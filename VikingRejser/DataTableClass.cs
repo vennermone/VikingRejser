@@ -45,9 +45,9 @@ namespace VikingRejser
         {
             Rejse rejse = new Rejse();
             rejse.Titel = (string)row["Titel"];
-            rejse.By = (string)row["By"];
-            rejse.StartDato = (DateOnly)row["StartDato"];
-            rejse.SlutDato = (DateOnly)row["SlutDato"];
+            rejse.Byen = (string)row["Byen"];
+            rejse.StartDato = (DateTime)row["StartDato"];
+            rejse.SlutDato = (DateTime)row["SlutDato"];
             rejse.Pris = (decimal)row["Pris"];
             rejse.MaxAntal = (int)row["MaxAntal"];
             rejse.Beskrivelse = (string)row["Beskrivelse"];

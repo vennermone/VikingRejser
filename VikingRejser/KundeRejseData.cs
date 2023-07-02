@@ -37,7 +37,7 @@ using System.Threading.Tasks;
         }
         public void OpretRejse(Rejse rejse)
         {
-            sqlAccess.ExecuteSql($"insert into Rejser (Titel, By, StartDato, SlutDato, Pris, MaxAntal, Beskrivelse) values ('{rejse.Titel}','{rejse.By}','{rejse.StartDato}','{rejse.SlutDato}','{rejse.Pris}','{rejse.MaxAntal}','{rejse.Beskrivelse}')");
+            sqlAccess.ExecuteSql($"insert into Rejser (Titel, Byen, StartDato, SlutDato, Pris, MaxAntal, Beskrivelse) values ('{rejse.Titel}','{rejse.Byen}','{rejse.StartDato}','{rejse.SlutDato}','{rejse.Pris}','{rejse.MaxAntal}','{rejse.Beskrivelse}')");
         }
         public void GemKunde(Kunde kunde)
         {

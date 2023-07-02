@@ -42,17 +42,17 @@ namespace VikingRejser
 
             return kunde;
         }
-        public Rejse OpretRejse(string titel, string by, DateOnly startDato, DateOnly slutDato, decimal pris, int maxAntal, string beskrivelse)
+        public Rejse OpretRejse(string titel, string byen, DateTime startDato, DateTime slutDato, decimal pris, int maxAntal, string beskrivelse)
         {
             Rejse rejse = new Rejse();
 
-            rejse.Titel= titel;
-            rejse.By= by;
-            rejse.StartDato= startDato;
-            rejse.SlutDato= slutDato;
-            rejse.Pris= pris;
-            rejse.MaxAntal= maxAntal;
-            rejse.Beskrivelse= beskrivelse;
+            rejse.Titel = titel;
+            rejse.Byen = byen;
+            rejse.StartDato = startDato;
+            rejse.SlutDato = slutDato;
+            rejse.Pris = pris;
+            rejse.MaxAntal = maxAntal;
+            rejse.Beskrivelse = beskrivelse;
             KundeRejseData.OpretRejse(rejse);
             RaisePropertyChanged(nameof(Rejseoversigt)); 
             return rejse;
