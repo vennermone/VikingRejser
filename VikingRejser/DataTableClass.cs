@@ -31,5 +31,28 @@ namespace VikingRejser
             kunde.Id = (int)row["Id"];
             return kunde;
         }
+        public ObservableCollection<Rejse> GetRejseoversigt(DataTable table)
+        {
+            ObservableCollection<Rejse> liste = new ObservableCollection<Rejse>();
+            foreach (DataRow row in table.Rows)
+            {
+                Rejse rejse = GetRejse(row);
+                liste.Add(rejse);
+            }
+            return liste;
+        }
+        private Rejse GetRejse(DataRow row)
+        {
+            Rejse rejse = new Rejse();
+            rejse.Titel = (string)row["Titel"];
+            rejse.By = (string)row["By"];
+            rejse.StartDato = (DateOnly)row["StartDato"];
+            rejse.SlutDato = (DateOnly)row["SlutDato"];
+            rejse.Pris = (decimal)row["Pris"];
+            rejse.MaxAntal = (int)row["MaxAntal"];
+            rejse.Beskrivelse = (string)row["Beskrivelse"];
+            rejse.Id = (int)row["Id"];
+            return rejse;
+        }
     }
 }

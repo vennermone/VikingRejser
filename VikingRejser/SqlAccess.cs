@@ -21,7 +21,7 @@ namespace VikingRejser
         bool Connect()
         {
             string cs;
-            cs = "Data Source=(localdb)\\MSSQLLocalDB;Database=VikingRejseData";
+            cs = "Data Source=(localdb)\\MSSQLLocalDB;Database=RejseDatabase";
 
             connection = new SqlConnection();
             connection.ConnectionString = cs;

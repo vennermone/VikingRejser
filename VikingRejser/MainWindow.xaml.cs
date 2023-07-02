@@ -45,5 +45,19 @@ namespace VikingRejser
         {
             RejseFunc.Remove(dg_Kunder.SelectedItem as Kunde);
         }
+
+        private void btn_OpretRejse(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //var DatoTid = DP_StartDato.DisplayDate
+                //DateOnly dateOnly = DP_StartDato.SelectedDate.Value.;
+                RejseFunc.OpretRejse(TB_Titel.Text, TB_By.Text, DateOnly.Parse(DP_StartDato.Text), DateOnly.Parse(DP_SlutDato.Text), int.Parse(TB_Pris.Text), int.Parse(TB_MaxAntal.Text), Tbox_Beskrivelse.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

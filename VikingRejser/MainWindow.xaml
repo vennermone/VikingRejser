@@ -40,17 +40,17 @@
                     <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,138,0,0" TextWrapping="Wrap" Text="Slutdato" VerticalAlignment="Top"/>
                     <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,166,0,0" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top"/>
                     <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,195,0,0" TextWrapping="Wrap" Text="Max Antal" VerticalAlignment="Top"/>
-                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="102,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="102,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="102,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <TextBox  Grid.Column="2" HorizontalAlignment="Left" Margin="102,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="TB_Titel" Grid.Column="2" HorizontalAlignment="Left" Margin="102,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="TB_By" Grid.Column="2" HorizontalAlignment="Left" Margin="102,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="TB_Pris" Grid.Column="2" HorizontalAlignment="Left" Margin="102,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="TB_MaxAntal" Grid.Column="2" HorizontalAlignment="Left" Margin="102,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,223,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
                     <DataGrid Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="244,10,0,10"/>
-                    <Button Grid.Column="2" Content="Opret rejse" HorizontalAlignment="Left" Margin="168,244,0,0" VerticalAlignment="Top"/>
+                    <Button Name="btn_OpretRejse" Grid.Column="2" Content="Opret rejse" HorizontalAlignment="Left" Margin="168,244,0,0" VerticalAlignment="Top" Click="Button_Click"/>
                     <TextBox Name="Tbox_Beskrivelse" Grid.Column="2" HorizontalAlignment="Left" Margin="8,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133" Height="73"/>
                     <Button Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="168,272,0,0" VerticalAlignment="Top" Width="63"/>
-                    <DatePicker Grid.Column="2" HorizontalAlignment="Left" Margin="102,106,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
-                    <DatePicker Grid.Column="2" HorizontalAlignment="Left" Margin="102,134,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+                    <DatePicker Name="DP_StartDato" Grid.Column="2" HorizontalAlignment="Left" Margin="102,106,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
+                    <DatePicker Name="DP_SlutDato" Grid.Column="2" HorizontalAlignment="Left" Margin="102,134,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
                 </Grid>
             </TabItem>
         </TabControl>

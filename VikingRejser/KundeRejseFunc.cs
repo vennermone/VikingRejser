@@ -16,6 +16,7 @@ namespace VikingRejser
 
         private void RaisePropertyChanged(string propName)
         {
+            //Sørger for automatisk at opdatere visningen
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propName));
@@ -30,7 +31,7 @@ namespace VikingRejser
             }
             Kunde kunde = new Kunde();
 
-            // Add inforkmation to kunde
+            // Tilføjer information til kunde
             kunde.Navn = navn;
             kunde.Adresse = adresse;
             kunde.Telefon = telefon;
@@ -41,11 +42,33 @@ namespace VikingRejser
 
             return kunde;
         }
+        public Rejse OpretRejse(string titel, string by, DateOnly startDato, DateOnly slutDato, decimal pris, int maxAntal, string beskrivelse)
+        {
+            Rejse rejse = new Rejse();
+
+            rejse.Titel= titel;
+            rejse.By= by;
+            rejse.StartDato= startDato;
+            rejse.SlutDato= slutDato;
+            rejse.Pris= pris;
+            rejse.MaxAntal= maxAntal;
+            rejse.Beskrivelse= beskrivelse;
+            KundeRejseData.OpretRejse(rejse);
+            RaisePropertyChanged(nameof(Rejseoversigt)); 
+            return rejse;
+        }
         public ObservableCollection<Kunde> Kundeoversigt
         {
             get
             {
                 return KundeRejseData.Kundeoversigt;
+            }
+        }
+        public ObservableCollection<Rejse> Rejseoversigt
+        {
+            get
+            {
+                return KundeRejseData.Rejseoversigt;
             }
         }
         public void Gem(Kunde kunde)
