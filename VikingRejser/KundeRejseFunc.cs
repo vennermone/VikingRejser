@@ -71,9 +71,9 @@ namespace VikingRejser
                 return KundeRejseData.Rejseoversigt;
             }
         }
-        public void Gem(Kunde kunde)
+        public void GemKunder(Kunde kunde)
         {
-            KundeRejseData.GemKunde(kunde);
+            KundeRejseData.GemKunder(kunde);
             RaisePropertyChanged(nameof(Kundeoversigt));
 
         }
@@ -81,6 +81,12 @@ namespace VikingRejser
         {
             KundeRejseData.SletKunde(kunde);
             RaisePropertyChanged(nameof (Kundeoversigt));
+        }
+        public void GemRejser(Rejse rejse)
+        {
+            KundeRejseData.GemRejser(rejse);
+            RaisePropertyChanged(nameof(Rejseoversigt));
+
         }
 
     }

@@ -21,8 +21,8 @@
                     <TextBox Name="Tbox_Navn" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="Tbox_Adresse" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="Tbox_Telefon" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="88,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-                    <DataGrid Name="dg_Kunder" Grid.Column="2" ItemsSource="{Binding RejseFunc.Kundeoversigt}" Margin="178,1,0,49" HorizontalAlignment="Left" Width="381"/>
-                    <Button Name="btn_Opdater" Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="85,309,0,0" VerticalAlignment="Top"/>
+                    <DataGrid Name="DG_Kunder" Grid.Column="2" ItemsSource="{Binding RejseFunc.Kundeoversigt}" Margin="178,1,0,49" HorizontalAlignment="Left" Width="381"/>
+                    <Button Name="btn_Opdater" Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="85,309,0,0" VerticalAlignment="Top" Click="btn_OpdaterKunde_Click"/>
                     <Button Name="bnt_Optret" Grid.Column="2" Content="Opret" HorizontalAlignment="Left" Margin="134,309,0,0" VerticalAlignment="Top" Click="bnt_OptretKunde_Click"/>
                     <Button Name="btn_Slet" Grid.Column="2" Content="Slet" HorizontalAlignment="Left" Margin="135,330,0,0" VerticalAlignment="Top" Width="33" Click="btn_Slet_Click"/>
                 </Grid>
@@ -45,10 +45,10 @@
                     <TextBox Name="TB_Pris" Grid.Column="2" HorizontalAlignment="Left" Margin="102,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBox Name="TB_MaxAntal" Grid.Column="2" HorizontalAlignment="Left" Margin="102,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
                     <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="8,223,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
-                    <DataGrid Grid.Column="2" ItemsSource="{Binding RejseFunc.Rejseoversigt}" Margin="244,10,0,10"/>
+                    <DataGrid Name="DG_Rejser" Grid.Column="2" ItemsSource="{Binding RejseFunc.Rejseoversigt}" Margin="244,10,0,10" />
                     <Button Name="btn_OpretRejse" Grid.Column="2" Content="Opret rejse" HorizontalAlignment="Left" Margin="168,244,0,0" VerticalAlignment="Top" Click="btn_OpretRejse_Click"/>
                     <TextBox Name="Tbox_Beskrivelse" Grid.Column="2" HorizontalAlignment="Left" Margin="8,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133" Height="73"/>
-                    <Button Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="168,272,0,0" VerticalAlignment="Top" Width="63"/>
+                    <Button Grid.Column="2" Content="Opdater" HorizontalAlignment="Left" Margin="168,272,0,0" VerticalAlignment="Top" Width="63" Click="btn_OpdaterRejse_Click"/>
                     <DatePicker Name="DP_StartDato" Grid.Column="2" HorizontalAlignment="Left" Margin="102,106,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
                     <DatePicker Name="DP_SlutDato" Grid.Column="2" HorizontalAlignment="Left" Margin="102,134,0,0" VerticalAlignment="Top" Width="120" Height="22"/>
                 </Grid>
