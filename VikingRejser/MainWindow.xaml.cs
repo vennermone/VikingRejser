@@ -25,7 +25,10 @@ namespace VikingRejser
 
     {
         public KundeRejseFunc RejseFunc { get; set; } = new KundeRejseFunc();
-        // This line declares a public property named RejseFunc of type KundeRejseFunc and initializes it with a new instance of KundeRejseFunc
+        // This line declares a public property named RejseFunc of type KundeRejseFunc and initializes it with a new instance of KundeRejseFunc.
+        // The RejseFunc property allows access to the functionality provided by the KundeRejseFunc class, which handles operations related to customer travel.
+        // By initializing it with a new instance of KundeRejseFunc, the RejseFunc property is ready to be used to perform operations on customer travel data.
+        
 
         public MainWindow()
         // This line declares a public constructor for the MainWindow class
